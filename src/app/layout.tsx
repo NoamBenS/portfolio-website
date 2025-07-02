@@ -13,15 +13,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <header className="fixed top-3 left-0 w-full z-50">
-          <div className="flex justify-center py-4">NOAM BEN SIMON</div>
+      <body className="min-h-screen flex flex-col">
+        <header style={{backgroundColor: "var(--background)"}} className="flex justify-center fixed top-0 left-0 w-full z-50 py-4">
+          <div className="">NOAM BEN SIMON</div>
         </header>
-        {children}
-        <footer className="fixed bottom-3 w-full z-50">
-          <div className="flex justify-center py-4 text-sm">
+        <main className="flex-1">
+          {children}
+        </main>
+        <footer className="flex justify-center py-4 text-sm">
             Website designed and coded by me.
-          </div>
         </footer>
       </body>
     </html>

@@ -1,3 +1,5 @@
+import { contacts, projects, skills } from "@/lib/collections";
+
 import {
   Popover,
   PopoverContent,
@@ -11,87 +13,53 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-const contacts = [
-  {
-    image: "icons/linkedin100.png",
-    label: "LinkedIn",
-    link: "https://www.linkedin.com/in/noambensimon/",
-  },
-  {
-    image: "icons/github100.png",
-    label: "Github",
-    link: "https://github.com/NoamBenS",
-  },
-  {
-    image: "icons/resume100.png",
-    label: "Resume",
-    link: "/NoamBenSimonResumeDemo.pdf",
-  },
-  {
-    image: "icons/email100.png",
-    label: "Email",
-    link: "mailto:me@noambensimon.com",
-  },
-];
-
-const projects = [
-  {
-    label: "Personal Website",
-    text: "This site is a great representation of my joy in programming and turning code into something functional and pleasing. This website also serves as a reflection of my dedication and passion in the field away from the classroom. As a personal project, I had the freedom to choose exactly how I wanted it to look and feel, which served as an incredibly enjoyable and fulfilling endeavor.",
-    link: "https://github.com/NoamBenS/Personal-Website",
-  },
-  {
-    label: "Radio Rideshare",
-    text: "Radio Rideshare is a project that I am currentl working on with my partners. It is a rhythm games that comes with a built-in level editor, all made in-house. The game is built in Godot, and written in GDScript.",
-    link: "https://github.com/Calverin/Radio-Rideshare",
-  },
-  {
-    label: "Pseudo Lambda",
-    text: "This is my take on a mock of AWS Lambda for serverless code execution. This project has been an undertaking to familiarize myself and learn the basics of the major problems and ideas behind distributed computing. This includes leader election, task scheduling, logging, fault tolerance, and more!",
-    link: "https://github.com/NoamBenS/PseudoLambda",
-  },
-  {
-    label: "Stock Terminal",
-    text: "Stock Terminal is a Java-based CLI that uses API calls to receive current, relevant, and customizable data on requested tickers. With customizability and professional use in mind, the project is built around user freedom and functionality. My partner and I collaborated and succeeded to develop Stock Terminal as a working program within a week of work.",
-    link: "https://github.com/MaxFdev/StocksTerminal_SE_Project",
-  },
-];
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col items-center">
       <div className="pt-15 text-center">
         <Popover>
           <PopoverTrigger className="hover:underline">CONTACT</PopoverTrigger>
           <PopoverContent
+            className="flex flex-row max-w-fit gap-x-2"
             style={{ backgroundColor: "var(--background)" }}
-          ></PopoverContent>
+          >
+            {contacts.map((contact, index) => (
+              <div key={index}>
+                <a href={contact.link} className="hover:underline">
+                  {contact.label}
+                </a>
+              </div>
+            ))}
+          </PopoverContent>
         </Popover>
         <Tabs
-          defaultValue="experience"
+          defaultValue="overview"
           className="pt-10 flex flex-col items-center"
         >
-          <TabsList className="gap-4">
-            <TabsTrigger value="experience">EXPERIENCE</TabsTrigger>
+          <TabsList className="gap-2">
+            <TabsTrigger value="overview">OVERVIEW</TabsTrigger>
             <TabsTrigger value="projects">PROJECTS</TabsTrigger>
             <TabsTrigger value="skills">SKILLS</TabsTrigger>
           </TabsList>
           {/* BREAKING UP THE CONTENT WITH A COMMENT*/}
-          <TabsContent
-            value="experience"
-            className="flex flex-col"
-          ></TabsContent>
+          <TabsContent value="overview">hello!</TabsContent>
           <TabsContent value="projects" className="max-w-1/2">
             <Carousel>
               <CarouselContent>
                 {projects.map((project, index) => (
                   <CarouselItem key={index}>
-                    <div className="p-4">
-                      <h3 className="mb-2">{project.label}</h3>
-                      <p className="mb-4">{project.text}</p>
-                      <a href={project.link} className="hover:underline"></a>
-                    </div>
+                    <h3>{project.label}</h3>
+                    <p className="mb-4">{project.text}</p>
+                    <a href={project.link} className="hover:underline">
+                      - GitHub -
+                    </a>
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -99,7 +67,28 @@ export default function Home() {
               <CarouselNext />
             </Carousel>
           </TabsContent>
-          <TabsContent value="skills">skills.</TabsContent>
+          <TabsContent value="skills" className="w-full">
+            <Accordion type="multiple">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It adheres to the WAI-ARIA design pattern.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It adheres to the WAI-ARIA design pattern.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It adheres to the WAI-ARIA design pattern.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </TabsContent>
         </Tabs>
       </div>
     </div>
