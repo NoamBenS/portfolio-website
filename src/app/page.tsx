@@ -19,11 +19,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
+  const arrays = ["LANGUAGES", "FRAMEWORKS", "APPS AND PROGRAMS"];
   return (
     <div className="flex flex-col items-center">
-      <div className="pt-15 text-center">
+      <div className="pt-15 text-center w-full">
         <Popover>
           <PopoverTrigger className="hover:underline">CONTACT</PopoverTrigger>
           <PopoverContent
@@ -49,13 +52,32 @@ export default function Home() {
             <TabsTrigger value="skills">SKILLS</TabsTrigger>
           </TabsList>
           {/* BREAKING UP THE CONTENT WITH A COMMENT*/}
-          <TabsContent value="overview">hello!</TabsContent>
-          <TabsContent value="projects" className="max-w-1/2">
+          <TabsContent value="overview" className="w-1/4">
+            <p>
+              Hey! I&apos;m Noam, an Honors Computer Science student at Yeshiva University.
+              <br />
+              <br />
+              While in school, I have worked hard to grow and develop my
+              skillset and knowledge in the field, including projects such as
+              this website, a rhythm game I built with my friends, and a mock
+              of AWS Lambda for dsitributed compute.
+              <br />
+              <br />
+              In my free time I like to read, go bouldering, cook,
+              and spend time with my friends (not all at once, though. I tried it once.
+              BIG mistake. The food turned out ok, though).
+              <br />
+              <br />
+              I hope you enjoy this website, and if you have any comments, critiques, or concerns,
+              please feel free to reach out to me!
+            </p>
+          </TabsContent>
+          <TabsContent value="projects" className="max-w-1/4">
             <Carousel>
               <CarouselContent>
                 {projects.map((project, index) => (
                   <CarouselItem key={index}>
-                    <h3>{project.label}</h3>
+                    <h3 className="font-bold mb-4">{project.label}</h3>
                     <p className="mb-4">{project.text}</p>
                     <a href={project.link} className="hover:underline">
                       - GitHub -
@@ -67,30 +89,26 @@ export default function Home() {
               <CarouselNext />
             </Carousel>
           </TabsContent>
-          <TabsContent value="skills" className="w-full">
+          <TabsContent value="skills" className="w-1/4">
             <Accordion type="multiple">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. It adheres to the WAI-ARIA design pattern.
+              {skills.map((array, index) => (
+                <AccordionItem key={index} value={arrays[index]} className="max-w-full">
+                <AccordionTrigger>{arrays[index]}</AccordionTrigger>
+                <AccordionContent className="flex flex-row flex-wrap justify-center">
+                {array.map((item, index) => (
+                  <div key={index}>
+                    <Badge>{item}</Badge>
+                  </div>
+                ))}
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
+              ))}
             </Accordion>
           </TabsContent>
         </Tabs>
       </div>
+      <Separator className="my-4 max-w-1/3" style={{ backgroundColor: "var(--foreground)" }} />
+      <h1 className="pt-10">WHAT I AM UP TO</h1>
     </div>
   );
 }

@@ -50,36 +50,27 @@ export const projects = [
  * array of skills, sorted by category of use
  */
 export const skills = [
-  {
-    label: "Languages",
-    items: [
-      "Java",
-      "Python",
-      "C",
-      "SQL",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "GDScript",
-      "Groq",
-    ],
-  },
-  {
-    label: "Frameworks",
-    items: ["Next.js", "Wordpress", "Vue", "Quasar"],
-  },
-  {
-    label: "Programs and Platforms",
-    items: [
-      "Figma",
-      "Sanity",
-      "Arduino",
-      "Clerk",
-      "Google Suite",
-      "GitHub",
-      "Git",
-      "Godot",
-    ],
-  },
+  [
+    "Java",
+    "Python",
+    "C",
+    "SQL",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "GDScript",
+    "Groq",
+  ],
+  ["Next.js", "Wordpress", "Vue", "Quasar"],
+  [
+    "Figma",
+    "Sanity",
+    "Arduino",
+    "Clerk",
+    "Google Suite",
+    "GitHub",
+    "Git",
+    "Godot",
+  ],
 ];
