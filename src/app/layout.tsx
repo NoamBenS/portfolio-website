@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import { ThemeProvider } from "@/lib/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle-component";
+
 export const metadata: Metadata = {
   icons: "n.svg",
   title: "Noam Ben Simon",
@@ -14,15 +17,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
-        <header style={{backgroundColor: "var(--background)"}} className="flex justify-center fixed top-0 left-0 w-full z-50 py-4">
-          <div className="">NOAM BEN SIMON</div>
-        </header>
-        <main className="flex-1">
-          {children}
-        </main>
-        <footer className="flex justify-center py-4 text-sm">
+        <ThemeProvider>
+          <header
+            style={{ backgroundColor: "var(--background)" }}
+            className="flex justify-center fixed top-0 left-0 w-full z-50 py-4"
+          >
+            <div>NOAM BEN SIMON</div>
+            <div className="fixed right-5">
+              <ThemeToggle />
+            </div>
+          </header>
+          <main className="flex-1">{children}</main>
+          <footer className="flex justify-center py-4 text-sm">
             Website designed and coded by me.
-        </footer>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );
