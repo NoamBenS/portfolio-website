@@ -177,8 +177,8 @@ export default function Home() {
                 a couple books I&apos;ve read recently that I recommend:
                 <br />
                 Words of Radiance (Brandon Sanderson), Fahrenheit 451 (Ray
-                Bradbury), and The Hitchhiker&apos;s Guide to the Galaxy
-                (Douglas Adams) 
+                Bradbury), The Hitchhiker&apos;s Guide to the Galaxy
+                (Douglas Adams), The Stationary Shop (Marjan Kamali)
                 <br />
                 And here are some of my current favorite albums:
                 <br />
