@@ -45,14 +45,6 @@ export default function Home() {
             ))}
           </PopoverContent>
         </Popover>
-        <div className="flex flex-col items-center">
-          <Image
-            src="/images/tel-aviv.jpg"
-            width={250}
-            height={200}
-            alt="tel-aviv"
-          />
-        </div>
         <Tabs
           defaultValue="overview"
           className="pt-10 flex flex-col items-center"
@@ -63,6 +55,14 @@ export default function Home() {
             <TabsTrigger value="skills">SKILLS</TabsTrigger>
           </TabsList>
           <TabsContent value="overview" className="md:max-w-1/2 max-w-full">
+            <div className="flex flex-col items-center">
+              <Image
+                src="/images/rockclimbing.jpg"
+                width={350}
+                height={200}
+                alt="rock-climbing"
+              />
+            </div>
             <p className="p-3">
               Hey! I&apos;m Noam, an Honors Computer Science student at Yeshiva
               University.
@@ -131,16 +131,28 @@ export default function Home() {
           <Card className="border-none shadow-none">
             <CardContent>
               <h1>PROFESSIONAL</h1>
-              <p>
-                I am currently interning for my university, building a website
-                to host educational content available to all. This work involves
-                designing and developing all aspects of the site, from the Figma
-                designs to the CMS schema and implementation. Although I am
-                still working in this position, I can already atest to the large
-                growth and experience I&apos;ve gained. This ranges from
-                learning to better manage large responsibilities and workloads
-                to expanding my knowledge in full-stack tools and frameworks.
-              </p>
+              <div className="flex flex-row flex-wrap gap-3 justify-center">
+                <div className="md:max-w-1/2">
+                  <p>
+                    I am currently interning for my university, building a
+                    website to host educational content available to all. This
+                    work involves designing and developing all aspects of the
+                    site, from the Figma designs to the CMS schema and
+                    implementation. Although I am still working in this
+                    position, I can already atest to the large growth and
+                    experience I&apos;ve gained. This ranges from learning to
+                    better manage large responsibilities and workloads to
+                    expanding my knowledge in full-stack tools and frameworks.
+                  </p>
+                </div>
+                <Image
+                  src="/images/headshot.jpg"
+                  width={250}
+                  height={200}
+                  alt="headshot"
+                  className="object-cover"
+                />
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -148,18 +160,29 @@ export default function Home() {
           <Card className="border-none shadow-none">
             <CardContent>
               <h1>ACADEMICS</h1>
-              <p>
-                I am entering my fourth and final year of a bachelors in
-                Computer Science with a focus on Distributed Systems. Through my
-                classes, coursework, projects, and extracurriculars, I have
-                built myself a strong foundation in the field of software
-                engineering. This includes work in parallel programming,
-                distributed systems, networking, and cybersecurity. Along with
-                this goes my work outside the classroom, such as in my position
-                as Head Website Manager for the YU Observer, an independent
-                school news publication, where my department works to manage and
-                update the publication&apos;s website.
-              </p>
+              <div className="flex flex-row flex-wrap gap-3 justify-center">
+                <Image
+                  src="/images/tel-aviv.jpg"
+                  width={250}
+                  height={200}
+                  alt="tel-aviv"
+                />
+                <div className="md:max-w-1/2">
+                  <p>
+                    I am entering my fourth and final year of a bachelors in
+                    Computer Science with a focus on Distributed Systems.
+                    Through my classes, coursework, projects, and
+                    extracurriculars, I have built myself a strong foundation in
+                    the field of software engineering. This includes work in
+                    parallel programming, distributed systems, networking, and
+                    cybersecurity. Along with this goes my work outside the
+                    classroom, such as in my position as Head Website Manager
+                    for the YU Observer, an independent school news publication,
+                    where my department works to manage and update the
+                    publication&apos;s website.
+                  </p>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -177,14 +200,30 @@ export default function Home() {
                 a couple books I&apos;ve read recently that I recommend:
                 <br />
                 Words of Radiance (Brandon Sanderson), Fahrenheit 451 (Ray
-                Bradbury), The Hitchhiker&apos;s Guide to the Galaxy
-                (Douglas Adams), The Stationary Shop (Marjan Kamali)
+                Bradbury), The Hitchhiker&apos;s Guide to the Galaxy (Douglas
+                Adams), The Stationary Shop (Marjan Kamali)
                 <br />
                 And here are some of my current favorite albums:
                 <br />
                 Only God Was Above Us (Vampire Weekend), Tears of Denial (Car
                 Seat Headrest), The New Abnormal (The Strokes)
               </p>
+              <div className="flex flex-row flex-wrap gap-3 justify-center">
+                <Image
+                  src="/images/subway.jpg"
+                  width={300}
+                  height={200}
+                  alt="subway"
+                  className="object-cover"
+                />
+                <Image
+                  src="/images/subwayplat.jpg"
+                  width={300}
+                  height={200}
+                  alt="subway"
+                  className="object-cover"
+                />
+              </div>
             </CardContent>
           </Card>
         </div>
