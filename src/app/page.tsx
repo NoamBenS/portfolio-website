@@ -62,7 +62,7 @@ export default function Home() {
             <TabsTrigger value="skills">SKILLS</TabsTrigger>
           </TabsList>
           {/* BREAKING UP THE CONTENT WITH A COMMENT*/}
-          <TabsContent value="overview" className="w-1/4">
+          <TabsContent value="overview" className="w-1/2">
             <p>
               Hey! I&apos;m Noam, an Honors Computer Science student at Yeshiva
               University.
@@ -82,7 +82,7 @@ export default function Home() {
               critiques, or concerns, please feel free to reach out to me!
             </p>
           </TabsContent>
-          <TabsContent value="projects" className="max-w-1/4">
+          <TabsContent value="projects" className="max-w-1/2">
             <Carousel>
               <CarouselContent>
                 {projects.map((project, index) => (
