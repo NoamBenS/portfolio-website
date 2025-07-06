@@ -174,12 +174,16 @@ export default function Home() {
                 York City! When I&apos;m not studying or working, you can find
                 me spending time reading, listening to music, or bouldering -
                 sometimes all three at once. If you&apos;re interested, here are
-                a couple books I&apos;ve recently read that I recommend: Words
-                of Radiance (Brandon Sanderson), Fahrenheit 451 (Ray Bradbury),
-                and The Hitchhiker&apos;s Guide to the Galaxy (Douglas Adams)
-                Here are some albums as well, if you are looking for
-                recommendations: Only God Was Above Us (Vampire Weekend), Tears
-                of Denial (Car Seat Headrest), The New Abnormal (The Strokes)
+                a couple books I&apos;ve read recently that I recommend:
+                <br />
+                Words of Radiance (Brandon Sanderson), Fahrenheit 451 (Ray
+                Bradbury), and The Hitchhiker&apos;s Guide to the Galaxy
+                (Douglas Adams) 
+                <br />
+                And here are some of my current favorite albums:
+                <br />
+                Only God Was Above Us (Vampire Weekend), Tears of Denial (Car
+                Seat Headrest), The New Abnormal (The Strokes)
               </p>
             </CardContent>
           </Card>
