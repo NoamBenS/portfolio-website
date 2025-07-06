@@ -45,7 +45,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="hover:underline"
+      className="hover:underline cursor-pointer"
     >
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}
     </button>
