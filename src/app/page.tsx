@@ -71,15 +71,13 @@ export default function Home() {
               While in school, I have worked hard to grow and develop my
               skillset and knowledge in the field, including projects such as
               this website, a rhythm game I built with my friends, and a mock of
-              AWS Lambda for dsitributed compute.
+              AWS Lambda for distributed compute.
               <br />
               <br />
-              In my free time I like to read, go bouldering, cook, and spend
+              In my free time I like to read, boulder, cook, and spend
               time with my friends (not all at once, though. I tried it once.
               BIG mistake. The food turned out ok, though).
               <br />
-              <br />I hope you enjoy this website, and if you have any comments,
-              critiques, or concerns, please feel free to reach out to me!
             </p>
           </TabsContent>
           <TabsContent value="projects" className="max-w-2/3 md:w-1/2">
@@ -139,7 +137,7 @@ export default function Home() {
                     work involves designing and developing all aspects of the
                     site, from the Figma designs to the CMS schema and
                     implementation. Although I am still working in this
-                    position, I can already atest to the large growth and
+                    position, I can already attest to the large growth and
                     experience I&apos;ve gained. This ranges from learning to
                     better manage large responsibilities and workloads to
                     expanding my knowledge in full-stack tools and frameworks.
