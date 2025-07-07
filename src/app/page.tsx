@@ -64,7 +64,7 @@ export default function Home() {
               />
             </div>
             <p className="p-3">
-              Hey! I&apos;m Noam, an Honors Computer Science student at Yeshiva
+              Hey! I&apos;m Noam, a Dean's List Computer Science student at Yeshiva
               University.
               <br />
               <br />
