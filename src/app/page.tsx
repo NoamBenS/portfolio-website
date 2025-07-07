@@ -64,7 +64,7 @@ export default function Home() {
               />
             </div>
             <p className="p-3">
-              Hey! I&apos;m Noam, a Dean's List Computer Science student at Yeshiva
+              Hey! I&apos;m Noam, a Dean&apos;s List Computer Science student at Yeshiva
               University.
               <br />
               <br />
@@ -75,8 +75,8 @@ export default function Home() {
               <br />
               <br />
               In my free time I like to read, boulder, cook, and spend
-              time with my friends (not all at once, though. I tried it once.
-              BIG mistake. The food turned out ok, though).
+              time with my friends (but not all at once. I tried it once - 
+              BIG mistake. The food turned out ok).
               <br />
             </p>
           </TabsContent>
