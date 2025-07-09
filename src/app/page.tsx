@@ -1,4 +1,4 @@
-import { contacts, projects, skills } from "@/lib/collections";
+import { contacts, projects, skills } from "@/lib";
 
 import Image from "next/image";
 

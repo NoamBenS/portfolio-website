@@ -11,9 +11,11 @@ const SunIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="25" cy="25" r="25" fill="white" />
+    {/* White sun with black outline */}
+    <circle cx="25" cy="25" r="23" fill="white" stroke="black" strokeWidth="2" />
   </svg>
 );
+
 
 const MoonIcon = () => (
   <svg
@@ -23,9 +25,12 @@ const MoonIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
+    {/* Black moon with white outline */}
     <path
       d="M0 50C13.8071 50 25 38.8071 25 25C25 11.1929 13.8071 0 0 0V50Z"
       fill="black"
+      stroke="white"
+      strokeWidth="2"
     />
   </svg>
 );
