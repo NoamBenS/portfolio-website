@@ -69,7 +69,7 @@ export default function Home() {
               <br />
               <br />
               While in school, I have worked hard to grow and develop my
-              skillset and knowledge in the field, including projects such as
+              skill set and knowledge in the field, including projects such as
               this website, a rhythm game I built with my friends, and a mock of
               AWS Lambda for distributed compute.
               <br />

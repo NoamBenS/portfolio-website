@@ -16,7 +16,7 @@ export const contacts = [
   },
   {
     label: "Resume",
-    link: "/NoamBenSimonResumeDemo.pdf",
+    link: "/NoamBenSimonResume.pdf",
   },
 ];
 
