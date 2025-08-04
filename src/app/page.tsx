@@ -1,3 +1,5 @@
+"use client";
+
 import { contacts, projects, skills } from "@/lib";
 
 import Image from "next/image";
@@ -7,7 +9,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Carousel,
   CarouselContent,
@@ -21,11 +22,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
 
 export default function Home() {
+  const [imageLoading, setImageLoading] = useState<boolean[]>(
+    Array(5).fill(true)
+  );
   const arrays = ["LANGUAGES", "FRAMEWORKS", "APPS AND PROGRAMS"];
   return (
     <div className="flex flex-col items-center">
@@ -38,7 +45,10 @@ export default function Home() {
           >
             {contacts.map((contact, index) => (
               <div key={index}>
-                <a href={contact.link} className="hover:underline">
+                <a
+                  href={contact.link}
+                  className="hover:underline"
+                >
                   {contact.label}
                 </a>
               </div>
@@ -54,40 +64,53 @@ export default function Home() {
             <TabsTrigger value="projects">PROJECTS</TabsTrigger>
             <TabsTrigger value="skills">SKILLS</TabsTrigger>
           </TabsList>
-          <TabsContent value="overview" className="md:max-w-1/2 max-w-full">
+          <TabsContent
+            value="overview"
+            className="md:max-w-1/2 max-w-2/3"
+          >
             <div className="flex flex-col items-center">
-              <Image
-                src="/images/rockclimbing.jpg"
-                width={350}
-                height={200}
-                alt="rock-climbing"
-              />
+              {imageLoading[0] ? (
+                <Skeleton />
+              ) : (
+                <Image
+                  src="/images/rockclimbing.jpg"
+                  width={350}
+                  height={200}
+                  alt="rock-climbing"
+                />
+              )}
             </div>
             <p className="p-3">
-              Hey! I&apos;m Noam, a Dean&apos;s List Computer Science student at Yeshiva
-              University.
+              Hey! I&apos;m Noam, a Dean&apos;s List Computer Science student at
+              Yeshiva University.
               <br />
               <br />
-              While in school, I have worked hard to grow and develop my
-              skill set and knowledge in the field, including projects such as
-              this website, a rhythm game I built with my friends, and a mock of
-              AWS Lambda for distributed compute.
+              While in school, I have worked hard to grow and develop my skill
+              set and knowledge in the field, including projects such as this
+              website, a rhythm game I built with my friends, and a mock of AWS
+              Lambda for distributed compute.
               <br />
               <br />
-              In my free time I like to read, boulder, cook, and spend
-              time with my friends (but not all at once. I tried it once - 
-              BIG mistake. The food turned out ok).
+              In my free time I like to read, boulder, cook, and spend time with
+              my friends (but not all at once. I tried it once - BIG mistake.
+              The food turned out ok).
               <br />
             </p>
           </TabsContent>
-          <TabsContent value="projects" className="max-w-2/3 md:w-1/2">
+          <TabsContent
+            value="projects"
+            className="max-w-2/3 md:w-1/2"
+          >
             <Carousel>
               <CarouselContent>
                 {projects.map((project, index) => (
                   <CarouselItem key={index}>
                     <h3 className="font-bold mb-4">{project.label}</h3>
                     <p className="mb-4">{project.text}</p>
-                    <a href={project.link} className="hover:underline">
+                    <a
+                      href={project.link}
+                      className="hover:underline"
+                    >
                       - GitHub -
                     </a>
                   </CarouselItem>
@@ -97,7 +120,10 @@ export default function Home() {
               <CarouselNext />
             </Carousel>
           </TabsContent>
-          <TabsContent value="skills" className="w-full md:w-1/4">
+          <TabsContent
+            value="skills"
+            className="w-2/3 md:w-1/4"
+          >
             <Accordion type="multiple">
               {skills.map((array, index) => (
                 <AccordionItem
@@ -124,13 +150,13 @@ export default function Home() {
         style={{ backgroundColor: "var(--foreground)" }}
       />
       <h1 className="pt-10">WHAT I AM UP TO</h1>
-      <div className="pt-10 flex flex-row flex-wrap md:max-w-1/2 max-w-full justify-center gap-3">
+      <div className="pt-10 flex flex-row flex-wrap max-w-2/3 justify-center gap-3">
         <div className="flex flex-col text-center">
           <Card className="border-none shadow-none">
             <CardContent>
               <h1>PROFESSIONAL</h1>
-              <div className="flex flex-row flex-wrap gap-3 justify-center">
-                <div className="md:max-w-1/2">
+              <div className="md:grid md:grid-cols-2 gap-3 justify-center items-center">
+                <div className="md:grid-1">
                   <p>
                     I am currently interning for my university, building a
                     website to host educational content available to all. This
@@ -143,13 +169,16 @@ export default function Home() {
                     expanding my knowledge in full-stack tools and frameworks.
                   </p>
                 </div>
-                <Image
-                  src="/images/headshot.jpg"
-                  width={250}
-                  height={200}
-                  alt="headshot"
-                  className="object-cover"
-                />
+                <div className="flex justify-center items-center">
+                  <Image
+                  className="flex md:grid-2 self-center"
+                    src="/images/headshot.jpg"
+                    width={300}
+                    height={200}
+                    alt="headshot"
+                    quality={100}
+                  />
+                </div>
               </div>
             </CardContent>
           </Card>
