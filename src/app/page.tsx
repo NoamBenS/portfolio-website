@@ -142,7 +142,7 @@ export default function Home() {
         className="my-4 max-w-2/3 md:max-w-1/3"
         style={{ backgroundColor: "var(--foreground)" }}
       />
-      <h1 className="my-4 p-3 bg-accent rounded-lg">WHAT I AM UP TO</h1>
+      <h1 className="my-4 p-3 bg-accent">WHAT I AM UP TO</h1>
       <div className="flex flex-row flex-wrap max-w-2/3 justify-center gap-3">
         <div className="flex flex-col text-center">
           <Card className="border-none shadow-none rounded-none bg-background">
