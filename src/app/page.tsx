@@ -23,16 +23,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { useState } from "react";
 
 export default function Home() {
-  const [imageLoading, setImageLoading] = useState<boolean[]>(
-    Array(5).fill(true)
-  );
+
+
   const arrays = ["LANGUAGES", "FRAMEWORKS", "APPS AND PROGRAMS"];
   return (
     <div className="flex flex-col items-center">
@@ -66,19 +63,15 @@ export default function Home() {
           </TabsList>
           <TabsContent
             value="overview"
-            className="md:max-w-1/2 max-w-2/3"
+            className="max-w-2/3"
           >
-            <div className="flex flex-col items-center">
-              {imageLoading[0] ? (
-                <Skeleton className="h-[20px] w-[100px] rounded-full" />
-              ) : (
-                <Image
+            <div className="flex flex-col items-center pt-4">
+              <Image
                   src="/images/rockclimbing.jpg"
                   width={350}
                   height={200}
                   alt="rock-climbing"
                 />
-              )}
             </div>
             <p className="p-3">
               Hey! I&apos;m Noam, a Dean&apos;s List Computer Science student at
@@ -99,7 +92,7 @@ export default function Home() {
           </TabsContent>
           <TabsContent
             value="projects"
-            className="max-w-2/3 md:w-1/2"
+            className="max-w-2/3 md:w-1/2 pt-4"
           >
             <Carousel>
               <CarouselContent>
@@ -149,10 +142,10 @@ export default function Home() {
         className="my-4 max-w-2/3 md:max-w-1/3"
         style={{ backgroundColor: "var(--foreground)" }}
       />
-      <h1 className="pt-10">WHAT I AM UP TO</h1>
-      <div className="pt-10 flex flex-row flex-wrap max-w-2/3 justify-center gap-3">
+      <h1 className="my-4 p-3 bg-accent rounded-lg">WHAT I AM UP TO</h1>
+      <div className="flex flex-row flex-wrap max-w-2/3 justify-center gap-3">
         <div className="flex flex-col text-center">
-          <Card className="border-none shadow-none">
+          <Card className="border-none shadow-none rounded-none bg-background">
             <CardContent>
               <h1>PROFESSIONAL</h1>
               <div className="md:grid md:grid-cols-2 gap-3 justify-center items-center">
@@ -171,7 +164,7 @@ export default function Home() {
                 </div>
                 <div className="flex justify-center items-center">
                   <Image
-                  className="flex md:grid-2 self-center"
+                    className="flex md:grid-2 self-center"
                     src="/images/headshot.jpg"
                     width={300}
                     height={200}
@@ -184,9 +177,9 @@ export default function Home() {
           </Card>
         </div>
         <div className="flex flex-col text-center">
-          <Card className="border-none shadow-none">
+          <Card className="border-none shadow-none rounded-none bg-background">
             <CardContent>
-              <h1>ACADEMICS</h1>
+              <h1>ACADEMIC</h1>
               <div className="flex flex-row flex-wrap gap-3 justify-center">
                 <Image
                   src="/images/tel-aviv.jpg"
@@ -214,7 +207,7 @@ export default function Home() {
           </Card>
         </div>
         <div className="flex flex-col text-center">
-          <Card className="border-none shadow-none">
+          <Card className="border-none shadow-none rounded-none bg-background">
             <CardContent>
               <h1>PERSONAL</h1>
               <p>
