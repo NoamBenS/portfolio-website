@@ -70,7 +70,7 @@ export default function Home() {
           >
             <div className="flex flex-col items-center">
               {imageLoading[0] ? (
-                <Skeleton />
+                <Skeleton className="h-[20px] w-[100px] rounded-full" />
               ) : (
                 <Image
                   src="/images/rockclimbing.jpg"
@@ -122,7 +122,7 @@ export default function Home() {
           </TabsContent>
           <TabsContent
             value="skills"
-            className="w-2/3 md:w-1/4"
+            className="w-2/3 md:w-1/2"
           >
             <Accordion type="multiple">
               {skills.map((array, index) => (
