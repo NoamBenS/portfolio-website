@@ -28,8 +28,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function Home() {
-
-
   const arrays = ["LANGUAGES", "FRAMEWORKS", "APPS AND PROGRAMS"];
   return (
     <div className="flex flex-col items-center">
@@ -67,13 +65,13 @@ export default function Home() {
           >
             <div className="flex flex-col items-center pt-4">
               <Image
-                  src="/images/rockclimbing.jpg"
-                  width={350}
-                  height={200}
-                  alt="rock-climbing"
-                />
+                src="/images/rockclimbing.jpg"
+                width={350}
+                height={200}
+                alt="rock-climbing"
+              />
             </div>
-            <p className="p-3">
+            <p className="p-3 md:w-1/2 mx-auto">
               Hey! I&apos;m Noam, a Dean&apos;s List Computer Science student at
               Yeshiva University.
               <br />
@@ -82,12 +80,6 @@ export default function Home() {
               set and knowledge in the field, including projects such as this
               website, a rhythm game I built with my friends, and a mock of AWS
               Lambda for distributed compute.
-              <br />
-              <br />
-              In my free time I like to read, boulder, cook, and spend time with
-              my friends (but not all at once. I tried it once - BIG mistake.
-              The food turned out ok).
-              <br />
             </p>
           </TabsContent>
           <TabsContent
@@ -148,7 +140,7 @@ export default function Home() {
           <Card className="border-none shadow-none rounded-none bg-background">
             <CardContent>
               <h1>PROFESSIONAL</h1>
-              <div className="md:grid md:grid-cols-2 gap-3 justify-center items-center">
+              <div className="md:grid md:grid-cols-2 gap-3 items-center">
                 <div className="md:grid-1">
                   <p>
                     I am currently interning for my university, building a
@@ -162,16 +154,14 @@ export default function Home() {
                     expanding my knowledge in full-stack tools and frameworks.
                   </p>
                 </div>
-                <div className="flex justify-center items-center">
-                  <Image
-                    className="flex md:grid-2 self-center"
-                    src="/images/headshot.jpg"
-                    width={300}
-                    height={200}
-                    alt="headshot"
-                    quality={100}
-                  />
-                </div>
+                <Image
+                  className="md:grid-2 justify-self-center"
+                  src="/images/headshot.jpg"
+                  width={300}
+                  height={200}
+                  alt="headshot"
+                  quality={100}
+                />
               </div>
             </CardContent>
           </Card>
@@ -180,14 +170,15 @@ export default function Home() {
           <Card className="border-none shadow-none rounded-none bg-background">
             <CardContent>
               <h1>ACADEMIC</h1>
-              <div className="flex flex-row flex-wrap gap-3 justify-center">
+              <div className="md:grid md:grid-cols-2 gap-3 justify-center items-center">
                 <Image
+                  className="md:grid-1 justify-self-center"
                   src="/images/tel-aviv.jpg"
                   width={250}
                   height={200}
                   alt="tel-aviv"
                 />
-                <div className="md:max-w-1/2">
+                <div className="md:grid-2">
                   <p>
                     I am entering my fourth and final year of a bachelors in
                     Computer Science with a focus on Distributed Systems.
@@ -215,18 +206,18 @@ export default function Home() {
                 I have found time on weekends to hang out with friends, visit
                 family - in Israel, Florida, and North Carolina, and tour New
                 York City! When I&apos;m not studying or working, you can find
-                me spending time reading, listening to music, or bouldering -
-                sometimes all three at once. If you&apos;re interested, here are
-                a couple books I&apos;ve read recently that I recommend:
+                me spending time reading, listening to music, or bouldering. If
+                you&apos;re interested, here are a couple books I&apos;ve read
+                recently that I recommend:
                 <br />
-                Words of Radiance (Brandon Sanderson), Fahrenheit 451 (Ray
-                Bradbury), The Hitchhiker&apos;s Guide to the Galaxy (Douglas
-                Adams), The Stationary Shop (Marjan Kamali)
+                The Alchemist (Paulo Coelho), Fahrenheit 451 (Ray Bradbury), The
+                Hitchhiker&apos;s Guide to the Galaxy (Douglas Adams), The
+                Stationary Shop (Marjan Kamali)
                 <br />
                 And here are some of my current favorite albums:
                 <br />
-                Only God Was Above Us (Vampire Weekend), Tears of Denial (Car
-                Seat Headrest), The New Abnormal (The Strokes)
+                Only God Was Above Us (Vampire Weekend), Bleed American (Jimmy
+                Eat World), A Matter of Time (Laufey)
               </p>
               <div className="flex flex-row flex-wrap gap-3 justify-center">
                 <Image
