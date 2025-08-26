@@ -66,6 +66,7 @@ export default function Home() {
             <div className="flex flex-col items-center pt-4">
               <Image
                 src="/images/rockclimbing.jpg"
+                priority
                 width={350}
                 height={200}
                 alt="rock-climbing"
