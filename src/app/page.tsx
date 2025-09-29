@@ -171,29 +171,19 @@ export default function Home() {
           <Card className="border-none shadow-none rounded-none bg-background">
             <CardContent>
               <h1>ACADEMIC</h1>
-              <div className="md:grid md:grid-cols-2 gap-3 justify-center items-center">
-                <Image
-                  className="md:grid-1 justify-self-center"
-                  src="/images/tel-aviv.jpg"
-                  width={250}
-                  height={200}
-                  alt="tel-aviv"
-                />
-                <div className="md:grid-2">
-                  <p>
-                    I am entering my fourth and final year of a bachelors in
-                    Computer Science with a focus on Distributed Systems.
-                    Through my classes, coursework, projects, and
-                    extracurriculars, I have built myself a strong foundation in
-                    the field of software engineering. This includes work in
-                    parallel programming, distributed systems, networking, and
-                    cybersecurity. Along with this goes my work outside the
-                    classroom, such as in my position as Head Website Manager
-                    for the YU Observer, an independent school news publication,
-                    where my department works to manage and update the
-                    publication&apos;s website.
-                  </p>
-                </div>
+              <div className="justify-center items-center">
+                <p>
+                  I am entering my fourth and final year of a bachelors in
+                  Computer Science with a focus on Distributed Systems. Through
+                  my classes, coursework, projects, and extracurriculars, I have
+                  built myself a strong foundation in the field of software
+                  engineering. This includes work in parallel programming,
+                  distributed systems, networking, and cybersecurity. Along with
+                  this goes my work outside the classroom, such as in my
+                  position as Head Website Manager for the YU Observer, an
+                  independent school news publication, where my department works
+                  to manage and update the publication&apos;s website.
+                </p>
               </div>
             </CardContent>
           </Card>
@@ -207,18 +197,31 @@ export default function Home() {
                 I have found time on weekends to hang out with friends, visit
                 family - in Israel, Florida, and North Carolina, and tour New
                 York City! When I&apos;m not studying or working, you can find
-                me spending time reading, listening to music, or bouldering. If
-                you&apos;re interested, here are a couple books I&apos;ve read
-                recently that I recommend:
+                me spending time reading, listening to music, or bouldering.
                 <br />
-                The Alchemist (Paulo Coelho), Fahrenheit 451 (Ray Bradbury), The
-                Hitchhiker&apos;s Guide to the Galaxy (Douglas Adams), The
-                Stationary Shop (Marjan Kamali)
                 <br />
-                And here are some of my current favorite albums:
+                If you&apos;re looking for a new book, here are a few I&apos;ve
+                read recently that I recommend:
                 <br />
-                Only God Was Above Us (Vampire Weekend), Bleed American (Jimmy
-                Eat World), A Matter of Time (Laufey)
+                <ul>
+                  <li>The Alchemist (Paulo Coelho)</li>
+                  <li>
+                    Algorithms to Live By (Brian Christian and Tom Griffiths)
+                  </li>
+                  <li>The Myth of Sisyphus (Albert Camus)</li>
+                  <li>Please Unsubscribe, Thanks! (Julio Vincent Gambuto)</li>
+                </ul>
+                <br />
+                And for music recommendations, here are some of my current
+                favorite albums:
+                <br />
+                <ul>
+                  <li>The Execution of All Things (Rilo Kiley)</li>
+                  <li>Bleed American (Jimmy Eat World)</li>
+                  <li>Plans (Death Cab for Cutie)</li>
+                  <li>Loaded (The Velvet Underground)</li>
+                </ul>
+                <br />
               </p>
               <div className="flex flex-row flex-wrap gap-3 justify-center">
                 <Image
