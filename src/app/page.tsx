@@ -204,22 +204,22 @@ export default function Home() {
                 read recently that I recommend:
                 <br />
                 <ul>
-                  <li>The Alchemist (Paulo Coelho)</li>
                   <li>
-                    Algorithms to Live By (Brian Christian and Tom Griffiths)
+                    Thus Spoke Zarathustra (Friedrich Nietzsche)
                   </li>
                   <li>The Myth of Sisyphus (Albert Camus)</li>
-                  <li>Please Unsubscribe, Thanks! (Julio Vincent Gambuto)</li>
+                  <li>Oathbringer (Brandon Sanderson)</li>
+                  <li>The Alchemist (Paulo Coelho)</li>
                 </ul>
                 <br />
                 And for music recommendations, here are some of my current
                 favorite albums:
                 <br />
                 <ul>
-                  <li>The Execution of All Things (Rilo Kiley)</li>
-                  <li>Bleed American (Jimmy Eat World)</li>
-                  <li>Plans (Death Cab for Cutie)</li>
-                  <li>Loaded (The Velvet Underground)</li>
+                  <li>Breakfast In America (Supertramp)</li>
+                  <li>Stones (Neil Diamond)</li>
+                  <li>LUX (ROSALÍA)</li>
+                  <li>choke enough (Oklou)</li>
                 </ul>
                 <br />
               </p>
