@@ -62,10 +62,11 @@ export const skills = [
     "GDScript",
     "Groq",
   ],
-  ["Next.js", "Wordpress", "Vue", "Quasar"],
+  ["Next.js", "Wordpress", "Vue", "Quasar", "Vercel"],
   [
     "Figma",
     "Sanity",
+    "Supabase",
     "Arduino",
     "Clerk",
     "Google Suite",

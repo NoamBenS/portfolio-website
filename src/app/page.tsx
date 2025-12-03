@@ -61,7 +61,7 @@ export default function Home() {
           </TabsList>
           <TabsContent
             value="overview"
-            className="max-w-2/3"
+            className="max-w-2/3 md:max-w-1/2"
           >
             <div className="flex flex-col items-center pt-4">
               <Image
@@ -72,7 +72,7 @@ export default function Home() {
                 alt="rock-climbing"
               />
             </div>
-            <p className="p-3 md:w-1/2 mx-auto">
+            <p className="p-3 max-w-2/3 md:max-w-1/2 mx-auto">
               Hey! I&apos;m Noam, a Dean&apos;s List Computer Science student at
               Yeshiva University.
               <br />
@@ -85,7 +85,7 @@ export default function Home() {
           </TabsContent>
           <TabsContent
             value="projects"
-            className="max-w-2/3 md:w-1/2 pt-4"
+            className="max-w-2/3 md:max-w-1/3 pt-4"
           >
             <Carousel>
               <CarouselContent>
@@ -108,14 +108,14 @@ export default function Home() {
           </TabsContent>
           <TabsContent
             value="skills"
-            className="w-2/3 md:w-1/2"
+            className="w-2/3 md:w-1/3"
           >
             <Accordion type="multiple">
               {skills.map((array, index) => (
                 <AccordionItem
                   key={index}
                   value={arrays[index]}
-                  className="max-w-full p-3"
+                  className="w-full p-3"
                 >
                   <AccordionTrigger>{arrays[index]}</AccordionTrigger>
                   <AccordionContent className="flex flex-row flex-wrap justify-center">
@@ -132,11 +132,11 @@ export default function Home() {
         </Tabs>
       </div>
       <Separator
-        className="my-4 max-w-2/3 md:max-w-1/3"
+        className="my-4 max-w-2/3 md:max-w-1/2"
         style={{ backgroundColor: "var(--foreground)" }}
       />
       <h1 className="my-4 p-3 bg-accent">WHAT I AM UP TO</h1>
-      <div className="flex flex-row flex-wrap max-w-2/3 justify-center gap-3">
+      <div className="flex flex-row flex-wrap max-w-2/3 md:max-w-1/2 justify-center gap-3">
         <div className="flex flex-col text-center">
           <Card className="border-none shadow-none rounded-none bg-background">
             <CardContent>
