@@ -14,10 +14,6 @@ export const contacts = [
     label: "Email",
     link: "mailto:me@noambensimon.com",
   },
-  {
-    label: "Resume",
-    link: "/NoamBenSimonResume.pdf",
-  },
 ];
 
 /**
