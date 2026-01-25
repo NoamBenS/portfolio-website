@@ -198,31 +198,28 @@ export default function Home() {
                 family - in Israel, Florida, and North Carolina, and tour New
                 York City! When I&apos;m not studying or working, you can find
                 me spending time reading, listening to music, or bouldering.
-                <br />
-                <br />
-                If you&apos;re looking for a new book, here are a few I&apos;ve
-                read recently that I recommend:
-                <br />
-                <ul>
-                  <li>
-                    Thus Spoke Zarathustra (Friedrich Nietzsche)
-                  </li>
-                  <li>The Myth of Sisyphus (Albert Camus)</li>
-                  <li>Oathbringer (Brandon Sanderson)</li>
-                  <li>The Alchemist (Paulo Coelho)</li>
-                </ul>
-                <br />
-                And for music recommendations, here are some of my current
-                favorite albums:
-                <br />
-                <ul>
-                  <li>Breakfast In America (Supertramp)</li>
-                  <li>Stones (Neil Diamond)</li>
-                  <li>LUX (ROSALÍA)</li>
-                  <li>choke enough (Oklou)</li>
-                </ul>
-                <br />
               </p>
+              <br />
+              <br />
+              If you&apos;re looking for a new book, here are a few I&apos;ve
+              read recently that I recommend:
+              <br />
+              <ul>
+                <li>Thus Spoke Zarathustra (Friedrich Nietzsche)</li>
+                <li>Algorithms to Live By (Brian Christian & Tom Griffiths)</li>
+                <li>Essential Poems (Emily Dickinson)</li>
+                <li>The Alchemist (Paulo Coelho)</li>
+              </ul>
+              <br />
+              And for music recommendations, here are some of my current
+              favorite albums:
+              <br />
+              <ul>
+                <li>Jubilee (Japanese Breakfast)</li>
+                <li>Breakfast In America (Supertramp)</li>
+                <li>Straight Line Was a Lie (The Beths)</li>
+              </ul>
+              <br />
               <div className="flex flex-row flex-wrap gap-3 justify-center">
                 <Image
                   src="/images/subway.jpg"

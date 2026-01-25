@@ -36,7 +36,7 @@ const MoonIcon = () => (
 );
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -44,15 +44,24 @@ export function ThemeToggle() {
   }, []);
 
   if (!mounted) {
-    return null;
+    return (
+      <button
+        className="hover:underline cursor-pointer opacity-0"
+        disabled
+        aria-label="Toggle theme"
+      >
+        <div style={{ width: 20, height: 20 }} />
+      </button>
+    );
   }
 
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "dark" : "light")}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       className="hover:underline cursor-pointer"
+      aria-label={`Switch to ${resolvedTheme === "dark" ? "light" : "dark"} mode`}
     >
-      {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+      {resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}
     </button>
   );
 }
