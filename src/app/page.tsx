@@ -29,7 +29,7 @@ export default function Home() {
   const arrays = ["LANGUAGES", "FRAMEWORKS", "APPS AND PROGRAMS"];
 
   return (
-    <div className="flex flex-col items-center text-center pt-15 w-full">
+    <div className="flex flex-col items-center text-center pt-15 w-full overflow-x-hidden">
       <Popover>
         <PopoverTrigger className="hover:underline">CONTACT</PopoverTrigger>
         <PopoverContent
@@ -47,7 +47,7 @@ export default function Home() {
           ))}
         </PopoverContent>
       </Popover>
-      <div className="w-3/4 md:max-w-2/3 lg:max-w-1/2 mx-auto px-6 py-4">
+      <div className="w-11/12 md:w-3/4 lg:max-w-1/2 mx-auto px-6 py-4">
         <Image
           src="/images/headshot.jpg"
           priority
@@ -67,7 +67,7 @@ export default function Home() {
           distributed compute.
         </div>
       </div>
-      <Card className="w-2/3 lg:w-1/2 mx-auto border-none shadow-none rounded-none bg-background py-4">
+      <Card className="w-11/12 md:w-2/3 lg:w-1/2 mx-auto border-none shadow-none rounded-none bg-background py-4">
         <CardTitle>PROJECTS</CardTitle>
         <CardContent>
           <Carousel>
@@ -105,7 +105,7 @@ export default function Home() {
           </Carousel>
         </CardContent>
       </Card>
-      <Card className="w-2/3 lg:w-1/2 mx-auto border-none shadow-none rounded-none bg-background py-4">
+      <Card className="w-11/12 md:w-2/3 lg:w-1/2 mx-auto border-none shadow-none rounded-none bg-background py-4">
         <CardContent>
           <CardTitle>SKILLS</CardTitle>
           <Accordion type="multiple">
