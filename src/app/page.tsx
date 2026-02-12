@@ -51,10 +51,10 @@ export default function Home() {
         <Image
           src="/images/headshot.jpg"
           priority
-          width={200}
-          height={200}
+          width={300}
+          height={300}
           alt="rock-climbing"
-          className="h-auto w-auto mx-auto rounded-lg"
+          className="h-auto max-w-[300px] mx-auto rounded-lg"
         />
         <div className="mx-auto p-3 text-center">
           Hey! I&apos;m Noam, a Dean&apos;s List Computer Science student at
