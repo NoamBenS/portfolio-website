@@ -56,12 +56,6 @@ export const projects = [
     link: "https://github.com/NoamBenS/fat32reader",
     image: "/images/fat_32.jpg",
   },
-  {
-    label: "Stock Terminal",
-    text: "A Java command-line application that retrieves real-time stock market data through external APIs. Built collaboratively in one week, it provides customizable financial information through an efficient terminal interface.",
-    link: "https://github.com/MaxFdev/StocksTerminal_SE_Project",
-    image: "/images/stock_terminal.png",
-  },
 ];
 
 /**
