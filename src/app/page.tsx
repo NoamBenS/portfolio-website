@@ -57,14 +57,14 @@ export default function Home() {
           className="h-auto max-w-[300px] mx-auto rounded-lg"
         />
         <div className="mx-auto p-3 text-center">
-          Hey! I&apos;m Noam, a Dean&apos;s List Computer Science student at
-          Yeshiva University.
+          Hey! I&apos;m Noam, a Computer Science graduate from Yeshiva
+          University passionate about building innovative software.
           <br />
-          <br />
-          While in school, I have worked hard to grow and develop my skill set
-          and knowledge in the field, including projects such as this website, a
-          rhythm game I built with my friends, and a mock of AWS Lambda for
-          distributed compute.
+          <br />I spend much of my time creating projects that challenge me and
+          help me grow as an engineer. Here you&apos;ll find this website, a rhythm
+          game I built with friends, and a distributed computing system, along
+          with other projects that reflect my curiosity and passion for software
+          engineering.
         </div>
       </div>
       <Card className="w-11/12 md:w-2/3 lg:w-1/2 mx-auto border-none shadow-none rounded-none bg-background py-4">
